@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Hello, Welcome to Boston dataset house price prediction - Linear Regression Model
+    </h1>
+    <div style="width: 250px;">
+    <form action="{{ url_for('predict')}}"method="post">
+        <input type="text" name="CRIM" label="CRIM" placeholder="Enter per capita crime rate by town" required="required"/><br/>
+        <input type="text" name="ZN" placeholder="Enter proportion of residential land zoned for lots over 25,000 sq.ft." required="required"/><br/>
+        <input type="text" name="INDUS" placeholder="Enter proportion of non-retail business acres per town" required="required"/><br/>
+        <input type="text" name="CHAS" placeholder="Enter Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)" required="required"/><br/>
+        <input type="text" name="NOX" placeholder="Enter nitric oxides concentration (parts per 10 million)" required="required"/><br/>
+        <input type="text" name="RM" placeholder="Enter average number of rooms per dwelling" required="required"/><br/>
+        <input type="text" name="Age" placeholder="Enter proportion of owner-occupied units built prior to 1940" required="required"/><br/>
+        <input type="text" name="DIS" placeholder="Enter weighted distances to five Boston employment centres" required="required"/><br/>
+        <input type="text" name="RAD" placeholder="Enter index of accessibility to radial highways" required="required"/><br/>
+        <input type="text" name="TAX" placeholder="Enter full-value property-tax rate per $10,000" required="required"/><br/>
+        <input type="text" name="PTRATIO" placeholder="Enter pupil-teacher ratio by town" required="required"/><br/>
+        <input type="text" name="B" placeholder="Enter 1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town" required="required"/><br/>
+        <input type="text" name="LSTAT" placeholder="Enter % lower status of the population" required="required"/><br/>
+
+        <button type="submit" class="btn btn-primary">Start Prediction</button>
+    </form>
+    </div>
+    <br/>
+    <br/>
+    {{prediction_text}}
+
+</body>
+</html>
